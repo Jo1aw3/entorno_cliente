@@ -1,7 +1,6 @@
 $(document).ready(function() {
 
 var elemVolver = document.getElementById("elemVolver");
-
 elemVolver.addEventListener("click", function() {
     window.location.href = "INDEX.html";
 });
@@ -15,16 +14,6 @@ if (recorte[recorte.length - 1] == "ELEGIR_PRODUCTO.html?view=platos" || recorte
     $('.navMenu').hide();
 } else {
     $('.navMenu').show();
-}
-
-function mostrarPlatosSeleccionados() {
-    var listaPlatos = $("#listaPlatosSeleccionados");
-    listaPlatos.empty();
-
-    for (var i = 0; i < platosSeleccionados.length; i++) {
-        var listItem = $("<li>").text(platosSeleccionados[i].titulo + " ===> Precio: " + platosSeleccionados[i].precio + "€");
-        listaPlatos.append(listItem);
-    }
 }
 
 });
