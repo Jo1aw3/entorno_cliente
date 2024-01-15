@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ocho</title>
+</head>
+<body>
+    <h1>¿Qué estas utilizando?</h1>
+
+    <button id="ordenador">Ordenador</button>
+    <button id="laptop">Laptop</button>
+    <button id="tablet">Tablet</button>
+
+    <script>
+        // Funciones para mostrar respuestas mediante alertas
+        document.getElementById("ordenador").addEventListener("click", function() {
+            mostrarAlerta("Respuesta 1: Utilizo un ordenador de escritorio.");
+        });
+
+        document.getElementById("laptop").addEventListener("click", function() {
+            mostrarAlerta("Respuesta 2: Utilizo una laptop.");
+        });
+
+        document.getElementById("tablet").addEventListener("click", function() {
+            mostrarAlerta("Respuesta 3: Utilizo una tablet.");
+        });
+
+        // Función para mostrar la respuesta en una alerta
+        function mostrarAlerta(respuesta) {
+            alert(respuesta);
+        }
+    </script>
+</body>
+</html>
+
+

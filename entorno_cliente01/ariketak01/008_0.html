@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ocho_0</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        
+        <h1>¿que estas utilizando?</h1>
+        
+
+        <button id="computer">Computer</button>
+        <button id="laptop">laptop</button>
+        <button id="tablet">Tablet</button>
+        
+        <script>
+        
+            // document es el punto de entrada al contenido del archivo en que se encuentra o esta vinculado
+            // .getElementById permite seleccionar algun elemento(etiqueta) del documento por medio de una ide anteriormente especificada
+            // .addEventListener permite añadir una llamada a una accion(evento) como por ejemplo una tecla o un click, este tendra otro parametro en el que se especificara su funcion
+            document.getElementById("computer").addEventListener("click", function() {
+                mostrarAlerta("Utilizo un ordenador de escritorio");
+            });
+            document.getElementById("laptop").addEventListener("click", function() {
+               mostrarAlerta("Utilizo una laptop"); 
+            });
+            document.getElementById("tablet").addEventListener("click", function() {
+                mostrarAlerta("Utilizo una tablet");
+            });   
+            
+            // aqui llamamos la funcion que anteriormente habiamos indicado en cada uno de los botones, y indicaremos la tarea que tiene que hacer. En este cado la alerta
+            function mostrarAlerta(respuesta) {
+                alert(respuesta);
+            }
+            
+        </script>
+        
+    </body>
+</html>
