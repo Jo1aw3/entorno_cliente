@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gestión de Camiones - Tu empresa de transporte de confianza">   <!-- Metaetiqueta de Descripción -->
+    <meta name="keywords" content="camiones, transporte, gestión de flotas, logística">  <!-- Metaetiqueta de Palabras Clave -->
+    <meta name="author" content="Tu Nombre">  <!-- Metaetiqueta de Autor -->
+    <title>Gestión de Camiones</title>
+    <link rel="stylesheet" href="css/gestion_camiones.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Gestión de Camiones</h1>
+    </header>
+
+    <section id="truck-list">
+        <!-- Aquí se mostrarán los camiones -->
+    </section>
+
+    <section id="add-truck-form">
+        <h2>Agregar Nuevo Camión</h2>
+        <form id="truck-form">
+            <label for="modelo">Modelo:</label>
+            <input type="text" id="modelo" required>
+
+            <label for="marca">Marca:</label>
+            <input type="text" id="marca" required>
+
+            <label for="ano">Año:</label>
+            <input type="number" id="ano" required>
+
+            <label for="imagen">Imagen URL:</label>
+            <input type="text" id="imagen" required>
+
+            <button type="submit">Agregar Camión</button>
+        </form>
+    </section>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/gestion_camiones.js"></script>
+</body>
+</html>

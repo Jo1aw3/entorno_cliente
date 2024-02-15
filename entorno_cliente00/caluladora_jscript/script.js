@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+
 console.log("el index se enlaza correctamente con el codigo");
 const inputNum01 = document.getElementById("numero01");
 const inputNum02 = document.getElementById("numero02");
@@ -32,5 +33,6 @@ function calcular() {
     } else {
         txtResultado.innerText = "Calculo imposible";
     }
-}   
+}  
+
 });
