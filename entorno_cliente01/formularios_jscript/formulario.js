@@ -1,4 +1,4 @@
-// defino una variable\elemento para llamar el imput del html por medio de su id
+// defino una variable para llamar el imput del html por medio de su id
 var inputCorreo = document.getElementById("correo");
 
  /*con el elemento anteriomente definido podremos usar un método para crear
