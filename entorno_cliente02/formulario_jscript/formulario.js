@@ -61,6 +61,20 @@ inputNombre.addEventListener("keyup", function () {
   }
 });
 
+// botones de envio
+botonEnviar.addEventListener("click", function () {
+  if (validarFormulario()) {
+    //quiero insertar los valores del formulario deltro de una tabla ya creada en otro html
+  }
+});
+
+botonPop.addEventListener("click", function () {
+  if (validarFormulario()) {
+    //quiero la misma tabla que se genera al pulsar botonEnviar dentro de una ventana popup
+  }
+});
+
+
 botonVentana.addEventListener("click", function () {
   if (validarFormulario()) {
     var elegidoCurso = document.querySelector('input[name="Curso"]:checked').value;
