@@ -1,27 +1,34 @@
+// obtenemos los elementos por medio de su id
 var tabla = document.getElementById("hemen");
-var boton = document.getElementById("CREAR");
-var izenaInput = document.getElementById("Izena");
-var abizenaInput = document.getElementById("Abizena");
-var notaInput = document.getElementById("Nota");
+var btnCrear = document.getElementById("CREAR");
+var inputNombre = document.getElementById("Izena");
+var inputApellido = document.getElementById("Abizena");
+var inputNota = document.getElementById("Nota");
 
-boton.addEventListener("click", function () {
-    var hilera = document.createElement("tr");
-
+/**
+ * @function btnCrear.addEventListener
+ * genero un evento al clickear el boton,
+ * en la funcion se creara una nueva fila
+ * con sus respectivas celdas y se agregaran a la tabla
+ * con los valores de los inputs anteriormente definidos
+ */
+btnCrear.addEventListener("click", function () {
+    var fila = document.createElement("tr");
     var celda1 = document.createElement("td");
     var celda2 = document.createElement("td");
     var celda3 = document.createElement("td");
 
-    var textoCelda1 = document.createTextNode(izenaInput.value);
-    var textoCelda2 = document.createTextNode(abizenaInput.value);
-    var textoCelda3 = document.createTextNode(notaInput.value);
+    var textoCelda1 = document.createTextNode(inputNombre.value);
+    var textoCelda2 = document.createTextNode(inputApellido.value);
+    var textoCelda3 = document.createTextNode(inputNota.value);
 
     celda1.appendChild(textoCelda1);
     celda2.appendChild(textoCelda2);
     celda3.appendChild(textoCelda3);
 
-    hilera.appendChild(celda1);
-    hilera.appendChild(celda2);
-    hilera.appendChild(celda3);
+    fila.appendChild(celda1);
+    fila.appendChild(celda2);
+    fila.appendChild(celda3);
     
-    tabla.appendChild(hilera);
+    tabla.appendChild(fila);
 });

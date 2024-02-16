@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>generarBotones</title>
+</head>
+<body>
+    
+    <button id="generar" >Generar</button>
+    <div id="buttonDIV" style="display: flex; justify-content: center;"></div>
+    
+    <script>
+
+        var botonGenerar = document.getElementById("generar");
+        var botonesDiv = document.getElementById("buttonDIV");
+
+        botonGenerar.addEventListener("click", function () {
+            generarBotones();
+        }); 
+
+        function generarBotones() {
+            
+            for (let i = 0; i < 6; i++) {
+                var boton = document.createElement("button");
+                boton.textContent = i;
+                boton.setAttribute("id", i);
+                botonesDiv.appendChild(boton);
+            }    
+        }
+        
+
+    </script>
+
+</body>
+</html>
