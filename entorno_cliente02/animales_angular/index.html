@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="app">
     <head>
         <meta charset="utf-8">
         <meta name="format-detection" content="telephone=no">
@@ -10,12 +10,14 @@
         <title>AZTERKETA</title>
     </head>
 
-    <body>
+    <body ng-controller="AnimalController">
 
         <div  id="pagInicial">
             <header>
                 <h1>IDENTIFICA LOS ANIMALES</h1>
-                <div id="barraImagenes"> </div>
+                <div id="barraImagenes">
+                    <div ng-repeat="imagen in imagenes" class="imagen"><img ng-src="{{imagen}}"></div>
+                </div>
                 <hr>
                 <div id="barraCirculos">  </div>
                 <button class="tipoSelect" id="verResultados"><a href="#test">VER RESULTADOS</a></button>

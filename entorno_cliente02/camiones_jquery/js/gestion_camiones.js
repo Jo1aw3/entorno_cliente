@@ -34,7 +34,7 @@ $(document).ready(function () {  //*Esta línea asegura que el código dentro de
             truckList.append(truckCard);
         });
     }
-
+    
     function createTruckCard(truck) {   //*Código para crear una tarjeta de camión y adjuntar eventos.  Crea dinámicamente una tarjeta de camión y agrega eventos, como el clic para mostrar detalles del camión
         var truckCard = $("<div class='truck-card'>");  //*se crea un elemento div con la clase truck-card y se asigna a la variable truckCard
         var truckImage = $("<img>").attr("src", truck.imagen).attr("alt", truck.modelo);  //*Se crea un elemento img, con la URL de la imagen del camión y el atributu alt con el modelo del camión
