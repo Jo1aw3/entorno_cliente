@@ -25,28 +25,28 @@ angular.module("app", []).controller("controller", function ($scope, $http) {
       }
     */
   ];
-
-  $scope.newTruck = {};
-
+  
   $http.get("json/camiones.json")
-    .then(function (response) {
-      $scope.trucks = response.data;
-      console.log($scope.trucks);
-    })
-    .catch(function (error) {
-      console.error("Error al cargar el archivo JSON:", error);
-    });
-
-  $scope.showTruckDetails = function (truck) {
+  .then(function (response) {
+    $scope.trucks = response.data;
+    console.log($scope.trucks);
+  })
+  .catch(function (error) {
+    console.error("Error al cargar el archivo JSON:", error);
+  });
+  
+  $scope.showTruckDetails = function (celda) {
     alert(
       "Detalles del Camión:\nModelo: " +
-        truck.modelo +
-        "\nMarca: " +
-        truck.marca +
-        "\nAño: " +
-        truck.ano
-    );
-  };
+      celda.modelo +
+      "\nMarca: " +
+      celda.marca +
+      "\nAño: " +
+      celda.ano
+      );
+    };
+    
+  $scope.newTruck = {};
 
   $scope.addTruck = function () {
     $scope.newTruck.id = $scope.trucks.length + 1;
