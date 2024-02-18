@@ -6,21 +6,17 @@
     <title>Gestión de Camiones</title>
     <link rel="stylesheet" href="css/gestion_camiones.css" />
   </head>
-  <body ng-controller="TruckController">
+  <body ng-controller="controller">
     <!-- Agregamos un encabezado h1 -->
     <h1>Gestión de Camiones</h1>
 
     <div id="truck-list">
       <!-- Aquí se mostrarán los camiones -->
-      <div
-        class="truck-card"
-        ng-repeat="truck in trucks"
-        ng-click="showTruckDetails(truck)"
-      >
-        <img ng-src="{{truck.imagen}}" alt="{{truck.modelo}}" />
-        <h3>{{truck.modelo}}</h3>
-        <p class="truck-info">Marca: {{truck.marca}}</p>
-        <p class="truck-info">Año: {{truck.ano}}</p>
+      <div class="truck-card" ng-repeat="cel in trucks" ng-click="showTruckDetails(cel)">
+        <img ng-src="{{cel.imagen}}" alt="{{cel.modelo}}" />
+        <h3>{{cel.modelo}}</h3>
+        <p class="truck-info">Marca: {{cel.marca}}</p>
+        <p class="truck-info">Año: {{cel.ano}}</p>
       </div>
     </div>
 
