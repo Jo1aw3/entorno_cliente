@@ -61,23 +61,11 @@ inputNombre.addEventListener("keyup", function () {
   }
 });
 
-// botones de envio
-botonEnviar.addEventListener("click", function () {
-  if (validarFormulario()) {
-    //quiero insertar los valores del formulario deltro de una tabla ya creada en otro html
-  }
-});
-
-botonPop.addEventListener("click", function () {
-  if (validarFormulario()) {
-    //quiero la misma tabla que se genera al pulsar botonEnviar dentro de una ventana popup
-  }
-});
-
-
 botonVentana.addEventListener("click", function () {
   if (validarFormulario()) {
-    var elegidoCurso = document.querySelector('input[name="Curso"]:checked').value;
+    var elegidoCurso = document.querySelector(
+      'input[name="Curso"]:checked'
+    ).value;
     var nuevaVentana = window.open("", "Formulario", "width=400, height=400");
     nuevaVentana.document.write(`
       <h3>Bienvenido!</h3>
@@ -85,6 +73,16 @@ botonVentana.addEventListener("click", function () {
       <p>Naciste el: ${inputFecha.value}</p>
       <p>Elegiste el curso: ${elegidoCurso}</p>
     `);
+  }
+});
+
+botonPop.addEventListener("click", function () {
+  if (validarFormulario()) {
+    var elegidoCurso = document.querySelector(
+      'input[name="Curso"]:checked'
+    ).value;
+    var url = `bigarrenLehioa.html?ncorreo=${inputCorreo.value}&firstname=${inputNombre.value}&lastname=${inputApellido.value}&fnacimi=${inputFecha.value}&Curso=${elegidoCurso}`;
+    window.open(url, "Popup", "width=900, height=700");
   }
 });
 
