@@ -1,6 +1,6 @@
 var app = angular.module('animalApp', []);
-
 app.controller('AnimalController', function ($scope, $http) {
+    
     $scope.animals = [];
     $scope.animalsChuleta = [];
     $scope.results = {};

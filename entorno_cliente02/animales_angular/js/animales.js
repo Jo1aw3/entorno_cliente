@@ -1,6 +1,5 @@
-var app = angular.module("app", []);
+var app = angular.module("app", []).controller("controller", function ($scope, $http) {
 
-app.controller("AnimalController", function ($scope, $http) {
   $scope.animals = [];
   $scope.results = {};
   $scope.gameStarted = false;
