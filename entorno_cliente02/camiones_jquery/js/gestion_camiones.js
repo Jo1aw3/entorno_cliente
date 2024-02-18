@@ -24,6 +24,7 @@ $(document).ready(function () {  //*Esta línea asegura que el código dentro de
     ];
 
     displayTrucks(trucks);  //*se llama a la función displayTrucks pasándole el array trucks para mostrar los camiones iniciales en la página
+    console.log(trucks);
 
     function displayTrucks(truckArray) {   //*Código para mostrar camiones en el DOM.  Esta función toma un array de camiones como parámetro y se encarga de mostrar
         var truckList = $("#truck-list");
@@ -71,15 +72,17 @@ $(document).ready(function () {  //*Esta línea asegura que el código dentro de
 
         trucks.push(newTruck);   //*Se agrega el nuevo camión al array trucks, se vuelve a mostrar
         displayTrucks(trucks);
+        console.log(trucks);
         $("#modelo, #marca, #ano, #imagen").val("");
     });
 
-    $("#add-truck-form").hover(   //*Animación del Formulario de Agregar Camiones.  Agrega un efecto de cambio en el margen superior del formulario de agregar camiones cuando el ratón ingresa o sale del área.
-        function () {
-            $(this).css("margin-top", "0");
-        },
-        function () {
-            $(this).css("margin-top", "20px");
-        }
-    );
+    // $("#add-truck-form").hover(   //*Animación del Formulario de Agregar Camiones.  Agrega un efecto de cambio en el margen superior del formulario de agregar camiones cuando el ratón ingresa o sale del área.
+    //     function () {
+    //         $(this).css("margin-top", "0");
+    //     },
+    //     function () {
+    //         $(this).css("margin-top", "20px");
+    //     }
+    // );
+
 });       //*Cierre del JQuery.  En resumen, JQuery es una herramienta que agiliza el desarrollo de aplicaciones web al proporcionar una interfaz.
