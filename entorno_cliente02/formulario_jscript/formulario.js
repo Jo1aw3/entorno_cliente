@@ -8,12 +8,9 @@ var inputApellido = document.getElementById("apellido");
 var inputFecha = document.getElementById("fnacimiento");
 var inputCursos = document.getElementsByClassName("Curso");
 // botones del formulario
-var btnEnviar = document.getElementsByName("submit");
-var botonEnviar = btnEnviar[0];
-var btnPop = document.getElementsByName("fabrirPopup");
-var botonPop = btnPop[0];
-var btnVentana = document.getElementsByName("fcrearVentana");
-var botonVentana = btnVentana[0];
+var btnEnviar = document.querySelector("input[type=submit]");
+var btnPop = document.getElementsByName("fabrirPopup")[0];
+var btnVentana = document.getElementsByName("fcrearVentana")[0];
 
 // verificar correo
 inputCorreo.addEventListener("blur", function () {
@@ -61,26 +58,30 @@ inputNombre.addEventListener("keyup", function () {
   }
 });
 
-botonVentana.addEventListener("click", function () {
+// evento de botones
+btnEnviar.addEventListener("click", function (event) {
+  if (!validarFormulario()) {
+    alert("Faltan datos por rellenar");
+    event.preventDefault();
+  } 
+});
+
+btnVentana.addEventListener("click", function () {
   if (validarFormulario()) {
-    var elegidoCurso = document.querySelector(
-      'input[name="Curso"]:checked'
-    ).value;
+    var cursoElegido = document.querySelector('input[name="Curso"]:checked').value;
     var nuevaVentana = window.open("", "Formulario", "width=400, height=400");
     nuevaVentana.document.write(`
       <h3>Bienvenido!</h3>
       <p>Tu nombre es: ${inputNombre.value}</p>
       <p>Naciste el: ${inputFecha.value}</p>
-      <p>Elegiste el curso: ${elegidoCurso}</p>
+      <p>Elegiste el curso: ${cursoElegido}</p>
     `);
   }
 });
 
-botonPop.addEventListener("click", function () {
+btnPop.addEventListener("click", function () {
   if (validarFormulario()) {
-    var elegidoCurso = document.querySelector(
-      'input[name="Curso"]:checked'
-    ).value;
+    var elegidoCurso = document.querySelector('input[name="Curso"]:checked').value;
     var url = `bigarrenLehioa.html?ncorreo=${inputCorreo.value}&firstname=${inputNombre.value}&lastname=${inputApellido.value}&fnacimi=${inputFecha.value}&Curso=${elegidoCurso}`;
     window.open(url, "Popup", "width=900, height=700");
   }
@@ -93,7 +94,7 @@ function validarFormulario() {
   var valorNombre = inputNombre.value;
   var valorApellido = inputApellido.value;
   var valorFecha = inputFecha.value;
-  var valorCursos = inputCursos.value;
+  var valorCurso = inputCursos.value;
   if (
     valorCorreo === "" ||
     valorPass01 === "" ||
@@ -101,7 +102,7 @@ function validarFormulario() {
     valorNombre === "" ||
     valorApellido === "" ||
     valorFecha === "" ||
-    valorCursos === ""
+    valorCurso === ""
   ) {
     alert("Faltan Datos por rellenar.");
     return false;
