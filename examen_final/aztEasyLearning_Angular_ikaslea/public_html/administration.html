@@ -1,0 +1,59 @@
+
+<html lang="en" >
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/administration.css" rel="stylesheet" type="text/css"/>
+        <script src="js/angular.min.js" type="text/javascript"></script>
+        <script src="js/jsAdministration.js" type="text/javascript"></script>
+    </head>
+    <body >
+ 
+    <header><h1>LISTS</h1> </header>
+   
+        
+         <div id="zonalista">
+             <table class="styled-table">
+                 <h2>USERS</h2>
+                 <thead><tr><th>ID</th><th>USERNAME</th><th>PASSWORD</th><th>TYPE</th><th>COURSE</th><th>POINTS</th><th>REALIZATION</th></tr> </thead>
+                 <tbody> <tr ><!-- repeat list of users -->  
+                     <td><!-- id --> </td> 
+                     <td><!-- userName -->  </td> 
+                     <td><!-- password --> </td> 
+                     <td><!-- userType -->   </td> 
+                     <td><!-- curso -->  </td> 
+                     <td><!-- puntos --> </td> 
+                     <td><!-- nivelRealizacion -->  </td> 
+                 </tr></tbody>
+             </table>
+           
+             <table class="styled-table">
+                 <h2>COURSES</h2>
+                 <thead><tr><th>ID</th><th>TYPE</th><th>COURSE</th><th>LEVEL</th><th>POINTS</th></tr> </thead>
+                 <tbody> <tr  ><!-- repeat list of courses -->  
+                     <td><!-- idCurso --> </td> 
+                     <td> <!-- tipo --></td> 
+                     <td><!-- nombreCurso --></td> 
+                     <td><!-- level --></td> 
+                     <td><!-- puntos --></td> 
+                    
+                 </tr></tbody>
+             </table>
+            
+              <table class="styled-table">
+                 <h2>ACTIVITIES</h2>
+                 <thead><tr><th>ID</th><th>TYPE</th><th>COURSE</th><th>LEVEL</th><th>TIPE ACTIV</th><th>IMAGE</th><th>POINTS</th></tr> </thead>
+                 <tbody> <tr ng-repeat="item3 in listaActiv" ><!-- repeat list of activities -->
+                     <td><!-- id -->  </td> 
+                     <td>  <!-- tipoCurso --> </td> 
+                     <td><!-- Curso --> </td> 
+                     <td> <!-- level --> </td> 
+                     <td><!-- tipoActiv --> </td> 
+                     <td><!-- imagen --> </td> 
+                      <td><!-- puntos --> </td> 
+                 </tr></tbody>
+             </table>
+          </div>    
+     </body>
+</html>
