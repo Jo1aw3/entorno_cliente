@@ -1,0 +1,92 @@
+<html lang="en" ng-app="app">
+  <head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="css/administration.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body ng-controller="controller">
+    <header><h1>LISTS</h1></header>
+
+    <div id="zonalista">
+      <table class="styled-table">
+        <h2>USERS</h2>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>USERNAME</th>
+            <th>PASSWORD</th>
+            <th>TYPE</th>
+            <th>COURSE</th>
+            <th>POINTS</th>
+            <th>REALIZATION</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="usuario in usuarios">
+            <!-- repeat list of users -->
+            <td>{{ usuario.id }}</td>
+            <td>{{ usuario.userName }}</td>
+            <td>{{ usuario.password }}</td>
+            <td>{{ usuario.userType }}</td>
+            <td>{{ usuario.curso }}</td>
+            <td>{{ usuario.puntos }}</td>
+            <td>{{ usuario.nivelRealizacion }}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="styled-table">
+        <h2>COURSES</h2>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>TYPE</th>
+            <th>COURSE</th>
+            <th>LEVEL</th>
+            <th>POINTS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="curso in cursos">
+            <td>{{ curso.idCurso }}</td>
+            <td>{{ curso.tipo }}</td>
+            <td>{{ curso.nombreCurso }}</td>
+            <td>{{ curso.level }}</td>
+            <td>{{ curso.puntos }}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="styled-table">
+        <h2>ACTIVITIES</h2>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>TYPE</th>
+            <th>COURSE</th>
+            <th>LEVEL</th>
+            <th>TIPE ACTIV</th>
+            <th>IMAGE</th>
+            <th>POINTS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="actividad in actividades">
+            <td>{{ actividad.id }}</td>
+            <td>{{ actividad.tipoCurso }}</td>
+            <td>{{ actividad.curso }}</td>
+            <td>{{ actividad.level }}</td>
+            <td>{{ actividad.tipoActiv }}</td>
+            <td>{{ actividad.imagen }}</td>
+            <td>{{ actividad.puntos }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script src="js/angular.min.js" type="text/javascript"></script>
+    <script src="js/jquery-3.1.1.min_3.js" type="text/javascript"></script>
+    <script src="js/jsAdministration.js" type="text/javascript"></script>
+  </body>
+</html>

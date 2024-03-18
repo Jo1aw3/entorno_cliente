@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="css/getstarted.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body ng-controller="controller">
+    <header>
+      <h1><!-- tipo   nombreCurso--></h1>
+    </header>
+    <div id="curso">
+      <div id="puntos">
+        <p>
+          <!-- nivelRealizacion-->
+          exercise/s done
+        </p>
+        <p>
+          <!-- puntos-->
+          points
+        </p>
+      </div>
+      <div class="nivel">
+        <h2 role="heading">{{actividad.level}}</h2>
+        <div class="cards">
+          <!-- <div class="card" ng-repeat="actividad in actividades | filter: { level: '!advanced' }"> -->
+          <div class="card" ng-repeat="actividad in actividades | filter: { level: '!advanced' }">
+            <!-- repeat list of activities -->
+            <div role="button" tabindex="101" class="box-container is_unlocked">
+              <!-- click on button , do the exercise-->
+              <div class="box" style="">
+                <div class="box_sup">
+                  <div class="box_num">{{actividad.id}}</div>
+                  <div class="box_open">
+                    <img id="imgEstado" src="images/candadoCerrado.png" alt=""/>
+                    <!-- imgEstado-->
+                  </div>
+                </div>
+                <div class="box_theme">
+                  <img ng-src="{{actividad.imagen}}" />
+                  <!-- image-->
+                </div>
+                <hr />
+                <div class="lsn_name">{{actividad.tipoActiv}}</div>
+              </div>
+            </div>
+          </div>
+          <div style="padding: 10px; margin: 10px; text-align: center"></div>
+        </div>
+        <!-- nivel-->
+      </div>
+    </div>
+    <script src="js/angular.min.js" type="text/javascript"></script>
+    <script src="js/jquery-3.1.1.min_3.js" type="text/javascript"></script>
+    <script src="js/jsgetStarted.js" type="text/javascript"></script>
+  </body>
+</html>
