@@ -25,7 +25,7 @@
         <h2 role="heading">{{actividad.level}}</h2>
         <div class="cards">
           <!-- <div class="card" ng-repeat="actividad in actividades | filter: { level: '!advanced' }"> -->
-          <div class="card" ng-repeat="actividad in actividades">
+          <div class="card" ng-repeat="actividad in actividades | filter: { level: '!advanced' }">
             <!-- repeat list of activities -->
             <div role="button" tabindex="101" class="box-container is_unlocked">
               <!-- click on button , do the exercise-->
