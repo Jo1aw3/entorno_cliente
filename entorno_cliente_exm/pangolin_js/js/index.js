@@ -225,9 +225,26 @@ document.addEventListener("DOMContentLoaded", function() {
                 var nPregunta = e.target.getAttribute("data-id");
                 var nRespuesta = e.target.getAttribute("data-i");
                 console.log(nPregunta + " / " + nRespuesta);
-                
                 // alert("Opcion Seleccionada");
                 
+                var respuestaCorrecta = false;
+                resulNivel.forEach(dato => {
+                    if (dato.correcto == nRespuesta) {
+                            console.log("correcto " + dato.correcto);
+                            respuestaCorrecta = true;
+                            // alert("la respuesta es correcta")
+                        } else {
+                            respuestaCorrecta = false;
+                            // alert("la respuesta es incorrecta")   
+                        }
+                });
+                if (respuestaCorrecta) {
+                    // alert("Bien");
+                    e.target.classList.add('acierto');
+                } else {
+                    // alert("Mal");
+                    e.target.classList.add('error');
+                }
             }
         });
     }
