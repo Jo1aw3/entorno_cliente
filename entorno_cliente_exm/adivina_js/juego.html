@@ -1,0 +1,52 @@
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="CSS/azterketa.css" rel="stylesheet" type="text/css"/>
+        <script src="js/azterketa.js" type="text/javascript"></script>
+     </head>
+    <body >
+        <header>
+            <h1> What word is this? </h1>
+            <p>
+                <img src="images/user.png" alt=""/>
+                <button id="idLogin">NEW WORD</button>
+                 <button id="idChange">CHANGE WORD</button>
+            <p>
+         </header>
+        <div id="content">
+            <div id="idAttempts"> <h2>remaining attempts : 5</h2></div>
+            <div id="idword"></div>
+            <div id="idBegin"><button>Try it</button></div>
+            <div id="idLetters">
+                 <label> LETTER </label>
+               <input type="text" id="idLetra" maxlength="1" placeholder ="letra">
+                <label>WORD</label><input id="palabraadiv" type="text" >
+                <button id="btnTry"> TRY IT</button>
+            </div>
+        </div>
+                   
+   <!-- Form -->
+    <div id ="divForms">
+      
+        <form action="#" >
+           
+          <div id="container" class="container" >
+            <h2>Login Form</h2>
+              <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" id="uname" required>
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" id="psw" required>
+             <button type="button" id ="btnLogin">Login</button>
+           </div>
+           <div id="divNewWord">
+                <h2>Write a new word</h2>
+                 <input type="text" placeholder="Enter word" id="newWord" required>
+              <button type="button" id ="btnNewWord">new word</button>
+           </div>  
+        </form>
+   </div>
+     </body>
+</html>
