@@ -1,0 +1,6 @@
+[{ "id":"0", "nick":"Aero", "points":"0","character":"9","password":"Aero"},
+ { "id":"1", "nick":"Calypso","points":"100", "character":"3","password":"Calypso" }, 
+ { "id":"2", "nick":"Enchantress", "points":"1200","character":"1","password":"Enchantress"}, 
+ { "id":"3", "nick":"Ivy",  "points":"200","character":"-1","password":"Ivy" },
+ { "id":"4", "nick":"Kevlac",  "points":"500","character":"0","password":"Kevlac" }]
+
