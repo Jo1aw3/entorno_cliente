@@ -37,7 +37,7 @@ function load() {
    const btnLogin = document.getElementById("btnLogin");
    const idPlayer = document.getElementById("idPlayer");
    const playerData = document.getElementById("playerData");
-   const imgPlayer = document.querySelector("#idPlayer>img");
+   // const imgPlayer = document.querySelector("#idPlayer>img");
    const btnDelete = document.getElementById("btnDelete");
    const btnSave = document.getElementById("btnSave");
    const btnCancel = document.getElementById("btnCancel");
@@ -128,18 +128,31 @@ function load() {
       console.log("validando el formulario");
       
       validar = false;
-      jugador = "";
+      chosen = "";
+      imgChosen = "";
+
       jugadores.forEach(dato => {
          if (user.value == dato.nick && pass.value == dato.password) {
             validar = true;
-            jugador = dato.id;
+
+            personajes.forEach(datoC => {
+               if (dato.character == datoC.id) {
+                  chosen = datoC.name;
+                  imgChosen = datoC.imgCharac;
+               }
+            });
+
+            playerData.innerHTML = `
+               <h2>PLAYER :  ${dato.nick}</h2>
+               <h2>POINTS :  ${dato.points}</h2>
+               <h2>CHARACTER CHOSEN : ${chosen}</h2>
+               <img src="${imgChosen}" alt=""/>
+            `;
          } 
       });
       if (validar) {
-         console.log("id del jugador: " + jugador);
          divForms.style.display = "none";
          idPlayer.style.display = "block";
-         
       } else {
          alert("usuario o constraseña incorrectos")
       }
