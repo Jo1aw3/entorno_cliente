@@ -7,4 +7,5 @@ function load() {
    textoAll=["CHARACTERS","PLAYERS","GAMES"]
 
 }
- 
+
+document.addEventListener("")
