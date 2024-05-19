@@ -158,6 +158,22 @@ function load() {
       }
    });
 
+   // para soltar el personaje del jugador
+   btnDelete.addEventListener("click", function() {
+
+   });
+
+   // para elegir un personaje al jugador
+   btnSave.addEventListener("click", function() {
+
+   });
+
+   // para salir de la información del jugador
+   btnCancel.addEventListener("click", function() {
+      ocultar_contenido();
+      divAbajo.style.display="block";
+
+   });
 }
 
 // para ocultar el contenido si se cambia de opcion

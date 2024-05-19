@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
     
     // ELEMENTOS
     // elementos del contenido
+    const cont = document.getElementById("content");
     const btnBegin = document.getElementById("idBegin");
     const divAttemps = document.getElementById("idAttempts");
     const divWord = document.getElementById("idWord");
@@ -22,8 +23,14 @@ document.addEventListener("DOMContentLoaded", function() {
     const btnchange = document.getElementById("idChange");
     const btnLogin = document.getElementById("idLogin");
     const btnTry = document.getElementById("btnTry");
-    // elementos del forum
+    // elementos del form
     const divLogin = document.getElementById("divForms");
+    const inpUser = document.getElementById("uname");
+    const inpPass = document.getElementById("psw");
+    const btnForm = document.getElementById("btnLogin")
+    const divNewWord = document.getElementById("divNewWord");
+    const newWord = document.getElementById("newWord");
+    const btnNewWord = document.getElementById("btnNewWord");
 
     // EVENTOS
     // Dentro de un addEventListener; la Funcion se llama sin los parentesis
@@ -33,18 +40,26 @@ document.addEventListener("DOMContentLoaded", function() {
     // Para verificar la palabra
     btnTry.addEventListener("click", intentar_palabra);
     // Para verificar la letra
-    inpLetra.addEventListener("keypress", function(e) {
+    inpLetra.addEventListener("keyup", function(e) {
+        // keypress (cuando simplemente presionas una tecla), keydown (cuando presionas una tecla), keyup (cuando sueltas una tecla)
+        // pasamos por parametro el elmento del evento, para poder saber cual tecla fue la que se pulso
         verificar_letra(e);
+        inpLetra.value = '';
     });
     // Para cambiar la letra aleatoriamente
     btnchange.addEventListener("click", changeWord);
     // Para iniciar sesión
     btnLogin.addEventListener("click", login);
+    // para validar el login
+    btnForm.addEventListener("click", validar);
+    // para agregar la palabra
+    btnNewWord.addEventListener("click", agregar_palabra);
 
     // FUNCIONES
     
     // Cargar contenido de la pagina
-    function cargar() { 
+    function cargar() {
+        cont.style.display = "flex";
         console.log("click: btnBegin; cargando contenido...")
         divWord.style.display = 'flex';
         // Tener en cuenta el tipo de display que tiene el contenedor segun sus propiedades en CSS 
@@ -132,6 +147,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
+    // cambiar la pregunta y reiniciar los intentos
     function changeWord() {
         console.log("cambiando palabra")
         // Renovar los puntos
@@ -149,11 +165,31 @@ document.addEventListener("DOMContentLoaded", function() {
         cargarCuadritos();
     }
     
+    // cargar el formulario de login
     function login() {
-        divLogin.style.display = block;
+        console.log("iniciando sesion");
+        cont.style.display = "none"
+        divLogin.style.display = "block";
     }
 
-    
+    // verifica el inicio de sesion
+    function validar() {
+        if (inpUser.value == "user" || inpPass.value == "pass") {
+            divNewWord.style.display = "block";
+        } else {
+            alert("el usuario o la contraseña son incorrectos")
+        }
+    }
+
+    // agregar una nueva palabra al array
+    function agregar_palabra () {
+        newWordMayus = newWord.value.toUpperCase();
+        listaPalabras.push(newWordMayus);
+        console.log(listaPalabras);
+        divLogin.style.display = "none";
+        cargar();
+        alert("palabra introducida: " + newWordMayus);
+    }
 
 });
 
