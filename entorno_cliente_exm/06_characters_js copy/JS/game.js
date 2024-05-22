@@ -12,6 +12,8 @@ function load() {
    var personajes = [];
    var jugadores = [];
 
+   var personajesLibres = [];
+
    fetch('json/characters.json')
    .then(respuesta => respuesta.json())
    .then(respuesta => personajes = Array.from(respuesta))
@@ -23,6 +25,29 @@ function load() {
    .then(respuesta => jugadores = Array.from(respuesta))
    .then(respuesta => console.log(jugadores))
    .catch(err => console.error(err));
+
+   function filtrar_libres() {
+      console.log(personajes.length);
+      for (p = 0; p < personajes.length; p++) {
+         let libre = true;
+         console.log("Id del personaje: " + personajes[p].id);
+         for (j = 0; j < jugadores.length; j++) {
+            if (personajes[p].id !== jugadores[j].character) {
+               console.log("No coincide: " + personajes[p].id + " | " + jugadores[j].character);
+            } else {
+               console.log("Coincide: " + personajes[p].id + " | " + jugadores[j].character);
+               libre = false;
+            }
+         }
+         if (libre) {
+            personajesLibres.push(personajes[p]);
+            console.log("libre = true");
+         } else {
+            console.log("libre = false");
+         }
+      }
+      console.log(personajesLibres);
+   }
 
    const box = document.getElementById("idOptions");
    const txtBox = document.querySelector("#idOptions>h2");
@@ -59,6 +84,9 @@ function load() {
             // alert("mostrando personajes");
             divAbajo.style.display="block";
          }
+
+         filtrar_libres();
+
       } else if (e.key == "ArrowLeft") {
          // alert("keydown: ArrowLeft");
          ocultar_contenido()

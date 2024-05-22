@@ -1,11 +1,11 @@
-[{ "id":"0","name":"Alora","imgCharac":"IMAGES/Alora.png", "libre":"EZ"},
- { "id":"1","name":"Davian","imgCharac":"IMAGES/Davian.png", "libre":"EZ"}, 
- { "id":"2","name":"Edem","imgCharac":"IMAGES/Edem.png", "libre":"BAI"}, 
- { "id":"3","name":"Eilish","imgCharac":"IMAGES/Eilish.png", "libre":"EZ"},
- { "id":"4","name":"Elomi","imgCharac":"IMAGES/Elomi.png", "libre":"BAI"},
- { "id":"5","name":"Gal","imgCharac":"IMAGES/Gal.png", "libre":"BAI"},
- { "id":"6","name":"Izumi","imgCharac":"IMAGES/Izumi.png", "libre":"BAI"},
- { "id":"7","name":"Lanai","imgCharac":"IMAGES/Lanai.png", "libre":"EZ"},
- { "id":"8","name":"Nyx","imgCharac":"IMAGES/Nyx.png", "libre":"BAI"},
- { "id":"9","name":"Satori","imgCharac":"IMAGES/Satori.png", "libre":"EZ"}]
+[{ "id":"0","name":"Alora","imgCharac":"IMAGES/Alora.png"},
+ { "id":"1","name":"Davian","imgCharac":"IMAGES/Davian.png"}, 
+ { "id":"2","name":"Edem","imgCharac":"IMAGES/Edem.png"}, 
+ { "id":"3","name":"Eilish","imgCharac":"IMAGES/Eilish.png"},
+ { "id":"4","name":"Elomi","imgCharac":"IMAGES/Elomi.png"},
+ { "id":"5","name":"Gal","imgCharac":"IMAGES/Gal.png"},
+ { "id":"6","name":"Izumi","imgCharac":"IMAGES/Izumi.png"},
+ { "id":"7","name":"Lanai","imgCharac":"IMAGES/Lanai.png"},
+ { "id":"8","name":"Nyx","imgCharac":"IMAGES/Nyx.png"},
+ { "id":"9","name":"Satori","imgCharac":"IMAGES/Satori.png"}]
 
