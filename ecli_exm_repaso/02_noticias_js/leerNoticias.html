@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="CSS/azterketa.css" rel="stylesheet" type="text/css"/>
+        <script src="js/leerNoticias.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <header>
+            <h1>TABLON NOTICIAS </h1>
+            <div id="miLogin">
+            <H2>LOGIN</H2>
+            <form id="formuLogin">
+                <label>USUARIO </label> 
+                <input id="idUsuario" type="text">
+                <label>CONTRASEÑA </label>
+                <input id="idContrasena" type="text"><br>
+                <div id="botones">
+                <input  type="button"  value="enviar">
+                <input  type="button"  value="salir">
+                </div>
+            </form> 
+           </div>
+       </header>
+        
+ <!--   NOTICIAS               -->       
+        <div id="elementos">
+           <div  class="texto">
+            <h3>NOTICIA DE ULTIMA HORA</h3>
+             <p> Maecenas vitae eros nisi. Maecenas ipsum erat, auctor sed libero vitae, pulvinar porttitor leo. Aenean mattis sem sit amet tortor tincidunt cursus. Vivamus egestas cursus ipsum, sed tristique magna fermentum in. Pellentesque ac pretium ex. Phasellus convallis ante urna, sed laoreet lacus imperdiet a. Nulla ac nibh faucibus, tincidunt turpis vel, pretium elit.</p>       
+           </div>
+           <div   class="texto">
+            <h3>NOTICIAS INTERNACIONALES</h3>
+             <p> Maecenas vitae eros nisi. Maecenas ipsum erat, auctor sed libero vitae, pulvinar porttitor leo. Aenean mattis sem sit amet tortor tincidunt cursus. Vivamus egestas cursus ipsum, sed tristique magna fermentum in. Pellentesque ac pretium ex. Phasellus convallis ante urna, sed laoreet lacus imperdiet a. Nulla ac nibh faucibus, tincidunt turpis vel, pretium elit.</p>       
+          </div>
+       </div>      
+ <!--  CREAR NOTICIAS               -->            
+         <div id="crearNoticia">
+            <form id="formuCrearNoticia">
+                <label>TITULO NOTICIA </label> <input type="text" id="idNoticiaNuevaTitulo"   /><br>
+                <label>TEXTO NOTICIA </label><textarea id="idNoticiaNuevaTexto"  rows="4" cols="50"></textarea>
+                <!-- <input  type="button"  value="enviar" onclick="return CrearNoticia()"> -->
+                <input  type="button"  value="enviar">
+            </form> 
+        </div> 
+              
+    </body>
+</html>
