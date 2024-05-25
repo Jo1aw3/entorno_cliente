@@ -58,18 +58,20 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
     
-    // Con un bucle diferente (forEach) recorre
-    imgMiddle.forEach((imagen, index)=> {
+    /* Con un bucle diferente (forEach) recorreremos el array de las imagenes 
+    opteniendo el valor de el elemento (imagen) y el numero de posicion en el array (index) */
+    imgMiddle.forEach((imagen, index) => {
+        // Gracias al blucle le asignaremos a cada elemento las siguientes funciones:
         imagen.addEventListener("mouseover",fondoBlanco);
         imagen.addEventListener("mouseout",fondoNegro);
+        // Haciendo click en algun elemento del array, se llamara a otra función; 
+        // pasando por parametro el index 
         imagen.addEventListener("click", function() {
             selectImg(index);
         });
     });
 
     function fondoBlanco() {
-        // document.querySelector("body").style.backgroundColor = 'white';
-        // document.querySelector("body").style.color = 'black';
         cuerpo.style.backgroundColor = 'white';
         cuerpo.style.color = 'black';
     }
@@ -86,45 +88,53 @@ document.addEventListener("DOMContentLoaded", function() {
     contenedor = document.getElementById("bottomDiv");
     
     function selectImg(numIndex) {
-        console.log(numIndex);
-        switch (numIndex) {
-            case 0:
-                mostrarImagenes(animales);
-                break;
-                case 1:
-                    mostrarImagenes(paisajes);
-                    break;
-                    case 2:
-                        mostrarImagenes(personas);
-                        break;
-                    }
-                }
-                
-                function mostrarImagenes(listaImg) {
-                    contenedor.innerHTML = "";
-                    listaImg.forEach((imagen, index)=> {
-                        contenedor.innerHTML += `<img src="${imagen}">`;
-                    });
-                }
-                
-                var contBottom = document.querySelector("#bottomDiv");
-                contBottom.addEventListener("click", (e) => {
-                    console.log(e);
-                    console.log(e.target);
+        // Segun el numero de index, pasara a otra funcion pasando por parametro el array correspondiente: 
+      console.log("seleccionado: " + numIndex);
+      switch (numIndex) {
+        case 0:
+          mostrarImagenes(animales);
+          break;
+        case 1:
+          mostrarImagenes(paisajes);
+          break;
+        case 2:
+          mostrarImagenes(personas);
+          break;
+      }
+    }
 
-                    if (e.target.nodeName == "IMG") {
-                        let newWin = window.open("about:blank", "Imagen Seleccionada", "width=720,height=720");
-                        let texto = `<h1>Has seleccionado esta imagen:</h1>
-                                    <img src="${e.target.getAttribute("src")}"></img>`;
-                        newWin.document.write(texto);
-                    }
-                });
+    function mostrarImagenes(listaImg) {
+      contenedor.innerHTML = "";
+      // Segun el valor del parametro, recorreremos uno de los tres array.
+      listaImg.forEach((imagen, index) => {
+        // Integramos en cada vuelta una nuevo elemento de tipo imagen; con el enlace de la imagen.
+        contenedor.innerHTML += `<img src="${imagen}">`;
+      });
+    }
 
-                // imgBottom.forEach((imagen, index)=> {
-                //     imagen.addEventListener("click", function() {
-                //         window.open("Popup", "width=900, height=700")
-                //         window.innerHTML = `<p>Hemos echo click en la imagen</p>`;
-                //     });
-                // });
-                
-            });
+    var contBottom = document.querySelector("#bottomDiv");
+
+    // Pasaremos por parametro el elemento para poder trabajar con el dentro del evento:
+    contBottom.addEventListener("click", (e) => {
+        // Imprimimos por consola la información del elemento clickeado.
+      console.log(e);
+      console.log(e.target);
+
+      // Ya que está dentro de un contenedor, puede que el elmento clickeado no sea una imagen, por lo cual se filtrara:
+      if (e.target.nodeName == "IMG") {
+        // Si el elemento clickeado es una imagen:
+        // (1) Crearemos una ventana nueva.
+        // (2) Guardamos html dentro de una variable (texto)
+        // (3) y escribimos en la nueva ventana el html de la variable.
+        let newWin = window.open(
+          "about:blank",
+          "Imagen Seleccionada",
+          "width=720,height=720"
+        );
+        let texto = `<h1>Has seleccionado esta imagen:</h1>
+                    <img src="${e.target.getAttribute("src")}"></img>`;
+        newWin.document.write(texto);
+      }
+    });
+
+});
