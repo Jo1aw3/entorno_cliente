@@ -90,17 +90,6 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log("Palabra introducida: " + palabraMayus);
         
         if (valorPalabra == "") {
-          // if (!valorLetra == "") {
-          //     if (!intentos == 0) {
-
-          //     } else {
-          //         setTimeout(function() {
-          //         alert("No tienes mas intentos");
-          //         }, 1000);
-          //     }
-          // } else {
-          //     console.log("Introduce una letra o una palabra")
-          // }
           alert("No haz introducido nada...");
         } else {
           if (palabraMayus == palabra) {
@@ -115,9 +104,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
     
-    // function restarIntentos() {
-    // }
-
     // Verificar las letras e intentos
     function verificar_letra(e) {
         // intentos = 0;
@@ -174,7 +160,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // verifica el inicio de sesion
     function validar() {
-        if (inpUser.value == "user" || inpPass.value == "pass") {
+        if (inpUser.value == "user" && inpPass.value == "pass") {
             divNewWord.style.display = "block";
         } else {
             alert("el usuario o la contraseña son incorrectos")

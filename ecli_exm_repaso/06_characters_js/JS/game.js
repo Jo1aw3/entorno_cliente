@@ -82,7 +82,6 @@ function load() {
          box.style.backgroundImage = `url('${imgAll[numBox]}')`;
          console.log("numero de selección: " + numBox + "; " + txtAll[numBox] + "; " + imgAll[numBox]);
       }
-
    });
    
    // para mostrar los personajes libres
@@ -100,22 +99,7 @@ function load() {
       });
       imgAbajo.innerHTML = imgFree;
    });
-   // btnFree.addEventListener("click", personajes_libres);
-   // function personajes_libres() {
-   //    console.log("mostrando los personajes libres");
-   //    var imgFree = "";
-   //    personajes.forEach(dato => {
-   //       if (dato.libre == "BAI") {
-   //          imgFree += `
-   //          <div class='caja'>
-   //             <img class='abajo' id="${dato.id}" src="${dato.imgCharac}"/>
-   //          </div>
-   //          `;
-   //       }
-   //    });
-   //    imgAbajo.innerHTML = imgFree;
-   // }
-
+   
    // para mostrar todos los personajes
    btnAll.addEventListener("click", function() {
       console.log("mostrando todos los personajes");
