@@ -48,7 +48,7 @@ function load() {
    // para cambiar las opciones 
    document.addEventListener("keydown", function(e) {
       // console.log("entrando al evento")
-      var tecla = e.key;
+      // var tecla = e.key;
       // console.log(e.key);
 
       if (e.key == "Enter") {
