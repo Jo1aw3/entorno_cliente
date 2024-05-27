@@ -1,0 +1,37 @@
+
+body{background-image: url("../IMAGES/fondoOpac.png"); background-size: cover; background-repeat: repeat}
+header{text-align: center;width:90%; margin:auto; padding-botton:20px; }
+#divAbajo , #divArriba{max-width:760px;margin:auto;}
+#divArriba{display:flex; flex-direction: row;justify-content:  center;
+ margin-bottom: 50px;}
+#divArriba div{border:1px solid black;height:200px;width:200px;
+/*    background-color:#F9F0E5;*/
+}
+#divArriba div h2{text-align: center;width:200px;color:white;}
+#divArriba div img{width:200px;height:150px;}
+#idCharacters{background-image:url("../IMAGES/allCharactersOpac.png"); background-size: cover; }
+#idCharacters h2{color:whitesmoke  !important;}
+#idPlayers{background-image:url("../IMAGES/allPlayersOpac.png"); background-size: cover; }
+#idGames{background-image:url("../IMAGES/allGamesOpac.png"); background-size: cover; }
+
+#divForms{
+  background-color:#F8E2E4;  border:1px solid white;  padding: 40px;  max-width: 400px;
+  margin: 40px auto;  border-radius: 4px;/* display:none;*/}
+#divForms form {border: 3px solid #f1f1f1;}
+#divForms input[type=text], input[type=password] {
+  width: 100%;  padding: 12px 20px;  margin: 8px 0;  display: inline-block;
+  border: 1px solid #ccc;  box-sizing: border-box;}
+#divForms button {
+  background-color: #A8C5F2;  color: black;  padding: 14px 20px;  margin: 8px 0;
+  border: none;  cursor: pointer;  width: 100%;}
+#divForms button:hover {  opacity: 0.8;}
+#divForms #container {  padding: 16px;}
+#divForms span.psw {  float: right;  padding-top: 16px;}
+#divForms #divNewWord {    display:none;}
+.caja{border:1px solid black;width:75px;display: inline-block}
+#divAbajo img{border:1px solid black;height:75px;width:75px;display: inline-block;}
+.opciones ,#imgAbajo{text-align: center;padding-bottom: 10px;}
+.opciones button  {width:170px; padding:10px;background-color: #A8C5F2;}
+#idPlayer{text-align: center;}
+#idPlayer img{width:100px;height:100px;margin-bottom: 10px;}
+/*#idPlayer button {background-color: #A8C5F2;}*/

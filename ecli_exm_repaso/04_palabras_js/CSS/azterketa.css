@@ -1,0 +1,101 @@
+body{
+    background-image: url("../images/fondo1.png");
+    background-repeat: repeat;
+    background-size: cover;
+}
+header{
+    display:flex;
+    flex-direction: row;
+    border: 4px solid white;
+    justify-content: space-between;
+    color: white;
+    font-size: 30px;
+}
+header h1{margin: 2px;width:60%;}
+header p{ display:flex;
+          flex-direction: row;
+}
+header>p>button {
+    width:80px;
+    height:40px;
+    
+}
+header>p>img{
+       width:50px;
+    height:60px;
+     margin-right: 10px; 
+}
+#content {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+#content #idAttempts, #content #idLetters,#content #idWord{
+   display:none;
+   
+}
+#content #idBegin { margin-top: 20%;}
+#content #idBegin button{
+    width:200px;
+    height:50px;
+}
+#content #idWord{flex-direction:row;}
+#content #idWord div{
+     width:80px;
+    height:80px;
+    border: 5px solid white;
+    background-color:  #41DCFB;
+    margin-right: 5px;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 80px;
+    text-align: center;
+    
+}
+#divForms{
+  background-color: #41DCFB;
+  border:1px solid white;
+  padding: 40px;
+  max-width: 400px;
+  margin: 40px auto;
+  border-radius: 4px;
+ display:none;
+}
+#divForms form {border: 3px solid #f1f1f1;}
+
+#divForms input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+#divForms button {
+  background-color: #C4F3FE;
+  color: black;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+#divForms button:hover {
+  opacity: 0.8;
+}
+
+#divForms #container {
+  padding: 16px;
+}
+
+#divForms span.psw {
+  float: right;
+  padding-top: 16px;
+}
+#divForms #divNewWord {
+    display:none;
+}

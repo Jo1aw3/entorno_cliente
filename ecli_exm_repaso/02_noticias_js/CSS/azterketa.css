@@ -1,0 +1,23 @@
+*{margin:0px;padding:0;}
+body{background-color: #CCC49F;}
+header{background-color:#6190ca; display:flex;
+      flex-direction: row; justify-content:  space-between;
+      color:black;}
+header h1{width:60%;margin:auto;color:black;text-align: center;}
+#miLogin{width:40%; }
+form label{width:40%;display:inline-block}
+form input{width:55%;display:inline-block}
+#botones input{display:inline-block; width:40%}
+
+h2{color:black;background-color:  #6190ca;text-align: center; }
+ 
+
+ #elementos{color:  #4a6ba2; font-size: 16px;float:left;clear:both;
+           margin-top:10px;margin-left:12%;;width:75%; background-color: #eaeaea; 
+           display:none;
+}
+#elementos .texto{border:2px solid gray; box-shadow: 10px 10px 5px  #5970B2;  }
+#crearNoticia{color:  #0a6ba2; font-size: 16px;float:left;clear:both;
+           margin-top:20px;margin-left:12%;;width:75%; background-color: #eaeaea; 
+           display:none;}
+textarea{margin:5px;}
