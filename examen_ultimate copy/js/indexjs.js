@@ -4,14 +4,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
       var listaHitzak =["oca","usoa","perro","hartza","ardilla","basurdea","cocodrilo","barraskiloa","rinoceronte","marigorringo","mantis religiosa","ornitorrinko"];
       var palabraLetras = [];
+      var letrasTecleadas = [];
 
       // [variables globales]
 
       var numeroPuntos = 0;
-      var cuentaPalabras = 1;
+      var cuentaPalabras = 0;
       var palabraNueva = "";
       var indiceLetra = 0;
-      var letraCorrecta = true;
+      var palabraError = false;
       
       // [elementos de la barra de navegacion]
 
@@ -23,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
       const centro = document.getElementById("centro");
 
-      // const centroSup = document.getElementById("centro-sup");
+      const centroSup = document.getElementById("centro-sup");
       const wordNumber = document.getElementById("wordNumber");
       const pointsNumber = document.getElementById("pointsNumber");
 
@@ -56,47 +57,30 @@ document.addEventListener("DOMContentLoaded", function() {
 
       document.addEventListener("keyup", function(e) {
             if (centro.style.display == "block") {
-                  if (letraCorrecta) {
+                  if (numeroPuntos < 50) {
+                        if (indiceLetra < palabraLetras.length) {
 
-                        if (numeroPuntos < 50) {
+
                               console.log("palabra tecleada: " + e.key);
                               console.log("palabra correcta: " + palabraLetras[indiceLetra]);
                               if (e.key == palabraLetras[indiceLetra]) {
-                                    letraCorrecta = true;
+                                    idHitzaTekleatu.innerHTML = "BIEN";
                               } else {
-                                    letraCorrecta = false;
-                              }                              
-                        } else {
-                              idHitza.innerHTML = "You're Cool!";
-                              idHitzaTekleatu.innerHTML = "";
-                              document.removeEventListener("keyup");
-                        }
-                        
-                        if (letraCorrecta) {
-                              idHitzaTekleatu.innerHTML += `<span class="acierto">${palabraLetras[indiceLetra]}</span>`;
-                              numeroPuntos = numeroPuntos + 1;
-                              indiceLetra++;
-      
-                              if (indiceLetra >= palabraLetras.length) {
-                                    palabra_aleatoria();
-                                    cuentaPalabras++;
-                                    wordNumber.innerHTML = ` word : ${cuentaPalabras}`;
-                                    pointsNumber.innerHTML = ` points : ${numeroPuntos}`
-                              } 
-      
-                        } else {
-                              idHitzaTekleatu.innerHTML += `<span class="fallo">${palabraLetras[indiceLetra]}</span>`
-                              setTimeout(function() {
-                                    indiceLetra = 0;
-                                    numeroPuntos = 0;
-                                    pointsNumber.innerHTML = ` points : ${numeroPuntos}`
-                                    letraCorrecta = true;
-                                    palabra_aleatoria();
-                                }, 2000);
-                        }
+                                    idHitzaTekleatu.innerHTML = "MAL";
+                                    palabraError = true;
+                                    // poner en rojo; alertar el fallo; quitar los puntos
+                              }
+                              indiceLetra++;                              
 
+                        } else {
+                              numeroPuntos = numeroPuntos + 20;
+                              cuentaPalabras++;
+                              palabra_aleatoria();
+                              indiceLetra = 0;
+                        }
+                  } else {
+                        idHitza.innerHTML = "You're Cool!";
                   }
-
             }
             
       });
@@ -108,8 +92,6 @@ document.addEventListener("DOMContentLoaded", function() {
             var ind = Math.round(Math.random() * (max - 0) + 0);
             palabraNueva = listaHitzak[ind];
             idHitza.innerHTML = palabraNueva;
-            idHitzaTekleatu.innerHTML = "";
-            indiceLetra = 0;
             alistar_letras();
       }
       function alistar_letras() {
