@@ -1,0 +1,169 @@
+
+/*******************valores iniciales********/
+* {
+  margin: 0px;
+  padding: 0px;
+  border: 0px; }
+
+html, body {
+    background-color:  #ffe8c6 ;  
+  height: 100vh;
+  margin: 0px; }
+
+body {
+  height: 100vh;
+  margin: 0px;
+ 
+
+  /******************HEADER************/ }
+  body header {
+    background-image: url("../img/paisajeCorto.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    height: 20vh;
+    /*fin nav-izda*/ }
+  
+    body header .nav-izda {
+      display: flex;
+      flex-direction: row; }
+      
+        body header .nav-izda a img {
+          width: 125px;
+          height: 75px;
+          display: inline-block; }
+      body header .nav-izda .nav-center {
+        padding-top: 20px;
+        color:  black;
+        font-size: 30px; }
+    body header .nav-dcha ul {
+      position: absolute;
+      right: 0px;
+      padding-top: 20px;
+      list-style-type: none;
+      text-align: center; }
+      body header .nav-dcha ul li {
+        display: inline;
+        text-align: right;
+        margin: 0px;
+        margin-right: 10px; 
+     }
+        body header .nav-dcha ul li a {
+          text-decoration: none;
+          padding: 2px 7px 2px 7px;
+          color: #96663F;
+          font-size: 20px; }
+          body header .nav-dcha ul li a img {
+            width: 150px;
+            height: 100px; }
+      body header .nav-dcha ul .boton {
+        background-color: #ffe8c6 ; }
+      body header .nav-dcha ul .boton:hover {
+        color: #96663F!important;
+        background-color: white; }
+        
+  body .boton {
+    border: 1px solid #2e518b;
+    padding: 10px;
+    background-color:  #ffe8c6 ;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Helvetica", sans-serif;
+    border-radius: 50px;
+    /*bordes redondos*/ }
+    body .boton a {
+      color:  #96663F!important; }
+     
+  body .boton:hover {
+    background-color: #96663F; 
+     color:   #ffe8c6 !important;
+  }
+  body #centro {
+     
+    height: 80vh;
+    display: none;
+    
+    flex-direction: column ;
+    box-sizing: content-box; }
+  
+    body #centro .centro-sup {
+      height: 30vh;
+      width: 80%;
+      display:flex;
+      flex-direction: row;
+      justify-content:  center;
+      
+    margin :auto;}
+       body #centro .centro-sup div {
+       
+    margin :auto;}
+    
+    body #centro .centro-inf {
+      box-sizing: content-box;
+      height: 80vh;
+      width: 60%;
+      margin:auto;
+      padding-top: 20px;
+      padding-left: 10px;
+      color: black;
+       font-size: 60px!important;
+      letter-spacing: 0.05em;
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+/*        border: 1px solid #2e518b;*/
+    }
+    body #centro .centro-inf #idHitzaTekleatu{
+        min-height:100px;
+    }
+      body #centro .centro-inf .boton {
+        border: 1px solid #2e518b;
+        padding: 20px;
+        background-color: #ffffff;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: "Helvetica", sans-serif;
+        border-radius: 10px;
+        width:200px;;
+       
+         margin-top:30px;
+               }
+    body #centro .centro-inf #btnChangeWord{display:none}            
+ .chosenlevel{
+           border: 3px solid #2e518b;
+           padding: 10px;
+           background-color:  #ffe8c6 ;
+           border-radius: 50px;
+      } 
+    .acierto{
+          color:green!important;
+      } 
+       .fallo{
+          color:red!important;
+      } 
+  @media screen and (max-width: 550px) {
+    body header {
+      display: block;
+      height: 20vh; }
+    body .centro {
+      display: block; }
+  
+    body header .nav-dcha ul {
+      position: relative; }
+/*    body #centro .centro-dcha {
+      width: 100%; }*/
+/*    body .centro-dcha h1 {
+      text-align: center; }
+    body .centro-dcha button {
+      width: 80%;
+      margin: auto;
+      margin-top: 10px;
+      border-radius: 0px; }
+    body .centro-dcha button:hover {
+      color: #ffffff !important; }*/
+}
+
+/*fin body*/
+
+
